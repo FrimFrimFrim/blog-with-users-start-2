@@ -55,6 +55,7 @@ class BlogPost(db.Model):
     # ***************Parent Relationship*************#
     comments = relationship("Comment", back_populates="parent_post")
 
+db.create_all()
 
 class Comment(db.Model):
     __tablename__ = "comments"
